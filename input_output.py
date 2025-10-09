@@ -34,4 +34,5 @@ def save_image(path: str, arr: np.ndarray):
         newImg.save(path)
     except Exception as e:
         print("Error saving image. Check the file path. \n")
+        print(e)
         raise SystemExit(3)
