@@ -7,6 +7,7 @@ from commands.negative import do_negative
 from commands.horizontal import do_horizontal_flip
 from commands.vertical import do_vertical_flip
 from commands.diagonal import do_diagonal_flip
+from commands.adaptive import do_adaptive_noise_filter
 
 COMMANDS = {
     "--brightness": do_brightness,
@@ -15,7 +16,9 @@ COMMANDS = {
     "--hflip": do_horizontal_flip,
     "--negative": do_negative,
     "--vflip": do_vertical_flip,
-    "--dflip": do_diagonal_flip
+    "--dflip": do_diagonal_flip,
+    "--vertical": do_vertical_flip,
+    "--adaptive": do_adaptive_noise_filter
 }
 
 
