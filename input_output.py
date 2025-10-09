@@ -30,7 +30,7 @@ def load_image(path: str) -> np.ndarray:
 def save_image(path: str, arr: np.ndarray):
     try:
         newImg = Image.fromarray(arr.astype(np.uint8))
-        #newImg.show() opcjonalna podgladarka
+        newImg.show() 
         newImg.save(path)
     except Exception as e:
         print("Error saving image. Check the file path. \n")

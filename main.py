@@ -6,14 +6,16 @@ from commands.contrast import do_contrast
 from commands.negative import do_negative
 from commands.horizontal import do_horizontal_flip
 from commands.vertical import do_vertical_flip
+from commands.diagonal import do_diagonal_flip
 
 COMMANDS = {
     "--brightness": do_brightness,
     "--help": do_help,
     "--contrast": do_contrast,
-    "--horizontal": do_horizontal_flip,
+    "--hflip": do_horizontal_flip,
     "--negative": do_negative,
-    "--vertical": do_vertical_flip
+    "--vflip": do_vertical_flip,
+    "--dflip": do_diagonal_flip
 }
 
 
