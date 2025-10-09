@@ -2,6 +2,20 @@ import sys
 from input_output import load_image, save_image
 from commands.brightness import do_brightness
 from commands.help import do_help
+from commands.contrast import do_contrast
+from commands.negative import do_negative
+from commands.horizontal import do_horizontal_flip
+from commands.vertical import do_vertical_flip
+
+COMMANDS = {
+    "--brightness": do_brightness,
+    "--help": do_help,
+    "--contrast": do_contrast,
+    "--horizontal": do_horizontal_flip,
+    "--negative": do_negative,
+    "--vertical": do_vertical_flip
+}
+
 
 if len(sys.argv) == 1:
     print("No command line parameters given.\n")
@@ -28,12 +42,14 @@ else:
     input_path = args.get('-input')
     output_path = args.get('-output')
 
-    if command == '--brightness':
-        im = load_image(input_path)
-        const = int(args.get('-const', 0))
-        newIm = do_brightness(im, const)
+    
+
+    im = load_image(input_path)
+    try:
+        newIm = COMMANDS[command](im, args)
         save_image(output_path, newIm)
 
-    else:
-        print("Unknown command: " + command)
+    except KeyError:
+        print("Command not found.\n")
+
     print("")
