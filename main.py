@@ -10,6 +10,8 @@ from commands.diagonal import do_diagonal_flip
 from commands.adaptive import do_adaptive_noise_filter
 from commands.shrinking import do_shrinking
 from commands.enlargement import do_enlargement
+from commands.min import do_min_filer
+from commands.max import do_max_filer
 
 COMMANDS = {
     "--brightness": do_brightness,
@@ -21,7 +23,9 @@ COMMANDS = {
     "--dflip": do_diagonal_flip,
     "--adaptive": do_adaptive_noise_filter,
     "--shrink": do_shrinking,
-    "--enlarge": do_enlargement
+    "--enlarge": do_enlargement,
+    "--min": do_min_filer,
+    "--max": do_max_filer
 }
 
 
