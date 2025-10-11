@@ -12,6 +12,8 @@ from commands.shrinking import do_shrinking
 from commands.enlargement import do_enlargement
 from commands.min import do_min_filer
 from commands.max import do_max_filer
+from commands.mean_square_error import do_mean_square_error
+from commands.peak_mse import do_peak_mse
 
 COMMANDS = {
     "--brightness": do_brightness,
@@ -26,6 +28,11 @@ COMMANDS = {
     "--enlarge": do_enlargement,
     "--min": do_min_filer,
     "--max": do_max_filer
+}
+
+SIMILARITY = {
+    "--mse": do_mean_square_error,
+    "--pmse": do_peak_mse
 }
 
 
@@ -51,17 +58,22 @@ else:
         else:
             print("Invalid argument:" + arg)
 
-    input_path = args.get('-input')
-    output_path = args.get('-output')
+    if command in SIMILARITY:
+        original = load_image(args.get('-original'))
+        other = load_image(args.get('-other'))
+        value = SIMILARITY[command](original, other)
+        print(str(value))
 
-    
+    else:
+        input_path = args.get('-input')
+        output_path = args.get('-output')
 
-    im = load_image(input_path)
-    try:
-        newIm = COMMANDS[command](im, args)
-        save_image(output_path, newIm)
+        im = load_image(input_path)
+        try:
+            newIm = COMMANDS[command](im, args)
+            save_image(output_path, newIm)
 
-    except KeyError:
-        print("Command not found.\n")
+        except KeyError:
+            print("Command not found.\n")
 
     print("")
