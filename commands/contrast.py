@@ -5,6 +5,10 @@ def do_contrast(img: np.ndarray, args: dict) -> np.ndarray:
         print("No factor given. \n")
         return
     PIVOT = 128
-    newImg = (img - PIVOT) * factor + PIVOT
-    newImg = np.clip(newImg, 0, 255).astype(np.uint8)
-    return newImg
+    x = np.arrange(256, dtype=np.float32)
+    lut = (x-PIVOT)*factor + PIVOT
+    
+    out = np.empty_like(img, dtype=np.float32)
+    np.take(lut, img, out=out) #przepisywanie wartosci do tabeli out
+
+    return out
