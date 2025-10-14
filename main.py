@@ -14,6 +14,8 @@ from commands.min import do_min_filer
 from commands.max import do_max_filer
 from commands.mean_square_error import do_mean_square_error
 from commands.peak_mse import do_peak_mse
+from commands.signal_to_noise_ratio import do_signal_to_noise
+from commands.max_difference import do_max_difference
 from commands.snr import do_snr
 from commands.psnr import do_psnr
 
@@ -34,9 +36,7 @@ COMMANDS = {
 
 SIMILARITY = {
     "--mse": do_mean_square_error,
-    "--pmse": do_peak_mse,
-    "--snr": do_snr,
-    "--psnr": do_psnr
+    "--pmse": do_peak_mse
 }
 
 
