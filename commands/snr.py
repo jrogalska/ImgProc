@@ -3,8 +3,7 @@ def do_snr(original : np.array, new: np.array):
     new = new.astype(np.float64)
     original = original.astype(np.float64)
     if original.shape != new.shape:
-        print("Images need to be the same type and size!")
-        return
+        raise ValueError("Images need to be the same type and size!")
     if original.ndim == 3:
         channels = []
         for ch in range(original.shape[2]):

@@ -6,7 +6,7 @@ def do_psnr(original: np.array, new:np.array):
     original = original.astype(np.float64)
     new = new.astype(np.float64)
     if new.shape!=original.shape:
-        print("Images need to be the same type and size!")
+        raise ValueError("Images need to be the same type and size!")
     if original.ndim==3:
         channels = []
         for ch in range(new.shape[2]):
