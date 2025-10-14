@@ -14,6 +14,8 @@ from commands.min import do_min_filer
 from commands.max import do_max_filer
 from commands.mean_square_error import do_mean_square_error
 from commands.peak_mse import do_peak_mse
+from commands.snr import do_snr
+from commands.psnr import do_psnr
 
 COMMANDS = {
     "--brightness": do_brightness,
@@ -27,12 +29,14 @@ COMMANDS = {
     "--shrink": do_shrinking,
     "--enlarge": do_enlargement,
     "--min": do_min_filer,
-    "--max": do_max_filer
+    "--max": do_max_filer,
 }
 
 SIMILARITY = {
     "--mse": do_mean_square_error,
-    "--pmse": do_peak_mse
+    "--pmse": do_peak_mse,
+    "--snr": do_snr,
+    "--psnr": do_psnr
 }
 
 
