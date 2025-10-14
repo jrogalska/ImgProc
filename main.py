@@ -36,7 +36,10 @@ COMMANDS = {
 
 SIMILARITY = {
     "--mse": do_mean_square_error,
-    "--pmse": do_peak_mse
+    "--pmse": do_peak_mse,
+    "--snr": do_snr,
+    "--psnr": do_psnr,
+    "--md": do_max_difference
 }
 
 

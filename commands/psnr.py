@@ -21,4 +21,10 @@ def _do_psnr_per_channel(original:np.array, new:np.array) -> np.float64:
     max_square = np.max(original)**2
     numerator = original.shape[0] * original.shape[1] * max_square
     denominator = np.sum((original - new)**2)
+    if denominator == 0 and numerator > 0:
+        return float('inf')
+    if denominator == 0 and numerator < 0:
+        return float("-inf")
+    if numerator == 0 and denominator ==0:
+        return float('nan')
     return 10* np.log10(numerator/denominator)
