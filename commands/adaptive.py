@@ -9,10 +9,9 @@ import numpy as np
 #Time complexity:
 #  O(N x M) iteracja po pikselach w grayscale, w rgb O(NxMx3)
 # Iteracja w pętli: S^2 dla każdegogo okna
-# Sortowanie mediany: O(log S^2) (źródło educative.io)
 # Opcjonalnie calosc * 4 w najgorszym przypadku dla ciagle zwiekszajacego sie okna
 # + Operacje typu stack
-# Łącznie  O(N x M x S^2 x log S^2 )
+
 
 
 
@@ -53,6 +52,7 @@ def _adaptive_noise_filter_single_channel(img: np.array):
                     s+=2
                     if s > sMax:
                         new_img[r, c] = zxy
+                        break
     return new_img
 
     
@@ -65,7 +65,7 @@ def _create_window(arr: np.array, row, col, size: int) -> np.array:
     r_max = min(arr.shape[0], row + half + 1)
     c_min = max(0, col - half)
     c_max = min(arr.shape[1], col + half + 1)
-    #for size: 3, half = 1, so we want arr[r-1:r+2, c-1:c+2] r+2 not inclusive c+2 not inclusive
+    #for size: 3, half = 1, so we want arr[r-1:r+2, c-1:c+2] r+2 not inclusive c+2 not inclusiveS
     return arr[r_min:r_max, c_min:c_max]
 
 
