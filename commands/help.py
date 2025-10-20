@@ -6,4 +6,4 @@ def do_help():
     print("--negative \n -input=<path>    Path to the input image \n -output=<path>   Path to save the image \n")
     print("--horizontal \n -input=<path>    Path to the input image \n -output=<path>   Path to save the image \n")
     print("--vertical \n -input=<path>    Path to the input image \n -output=<path>   Path to save the image \n")
-    
+    print("--adaptive \n -input=<path>    Path to the input image \n -output=<path>   Path to save the image \n -sMin=<value default 3> minimum window size \n -sMax=<value default 3> maximum window size")
