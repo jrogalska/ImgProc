@@ -18,7 +18,8 @@ import numpy as np
 def do_adaptive_noise_filter(img:np.array, args:dict):
     sMax = args.get("sMax", 9)
     sMin = args.get("sMin", 3)
-
+    if (sMax%2!=0 or sMin%2!=0):
+        raise ValueError("Window size must be a number divisible by 2")
     if img.ndim == 3:
         channels = []
         for ch in range(img.shape[2]): #3
