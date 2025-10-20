@@ -16,17 +16,20 @@ import numpy as np
 
 
 def do_adaptive_noise_filter(img:np.array, args:dict):
+    sMax = args.get("sMax", 9)
+    sMin = args.get("sMin", 3)
+
     if img.ndim == 3:
         channels = []
         for ch in range(img.shape[2]): #3
             filtered_channel = _adaptive_noise_filter_single_channel(img[:, :, ch])
-            channels.append(filtered_channel)
+            channels.append(filtered_channel, sMax, sMin)
         return np.stack(channels , axis = 2)  
     else:
-        return _adaptive_noise_filter_single_channel(img)
+        return _adaptive_noise_filter_single_channel(img, sMax, sMin)
 
 
-def _adaptive_noise_filter_single_channel(img: np.array):
+def _adaptive_noise_filter_single_channel(img: np.array, sMax:int, sMin:int):
     sMax = 9
     sMin = 3
     rows, cols = img.shape[0], img.shape[1]
@@ -38,20 +41,23 @@ def _adaptive_noise_filter_single_channel(img: np.array):
             while True:
                 zxy = img[r, c]
                 window = _create_window(img, r, c, s)
-                A1 = np.median(window) - np.min(window)
-                A2 = np.median(window) - np.max(window)
+                min = np.min(window).astype(np.int32)
+                max = np.max(window).astype(np.int32)
+                med = np.median(window).astype(np.int64)
+                A1 = med - min
+                A2 = med - max
                 if A1 > 0 and A2 < 0:
-                    B1 = zxy - np.min(window)
-                    B2 = zxy - np.max(window)
+                    B1 = zxy - min
+                    B2 = zxy - max
                     if B1 > 0 and B2 < 0:
                         new_img[r, c] = zxy
                     else:
-                        new_img[r, c] = np.median(window)
+                        new_img[r, c] = med
                     break
                 else:
                     s+=2
                     if s > sMax:
-                        new_img[r, c] = zxy
+                        new_img[r, c] = med
                         break
     return new_img
 
@@ -67,5 +73,4 @@ def _create_window(arr: np.array, row, col, size: int) -> np.array:
     c_max = min(arr.shape[1], col + half + 1)
     #for size: 3, half = 1, so we want arr[r-1:r+2, c-1:c+2] r+2 not inclusive c+2 not inclusiveS
     return arr[r_min:r_max, c_min:c_max]
-
 
