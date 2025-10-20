@@ -18,21 +18,19 @@ import numpy as np
 def do_adaptive_noise_filter(img:np.array, args:dict):
     sMax = args.get("sMax", 9)
     sMin = args.get("sMin", 3)
-    if (sMax%2!=0 or sMin%2!=0):
-        raise ValueError("Window size must be a number divisible by 2")
+    if (sMax%2==0 or sMin%2==0):
+        raise ValueError("Window size cannot be a number divisible by 2")
     if img.ndim == 3:
         channels = []
         for ch in range(img.shape[2]): #3
-            filtered_channel = _adaptive_noise_filter_single_channel(img[:, :, ch])
-            channels.append(filtered_channel, sMax, sMin)
+            filtered_channel = _adaptive_noise_filter_single_channel(img[:, :, ch], sMax, sMin)
+            channels.append(filtered_channel)
         return np.stack(channels , axis = 2)  
     else:
         return _adaptive_noise_filter_single_channel(img, sMax, sMin)
 
 
 def _adaptive_noise_filter_single_channel(img: np.array, sMax:int, sMin:int):
-    sMax = 9
-    sMin = 3
     rows, cols = img.shape[0], img.shape[1]
     new_img = np.zeros((rows, cols), dtype=np.int16)
 

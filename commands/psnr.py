@@ -12,7 +12,7 @@ def do_psnr(original: np.array, new:np.array):
         for ch in range(new.shape[2]):
             calculated = _do_psnr_per_channel(original[:, :, ch], new[:, :, ch])
             channels.append(calculated)
-        return channels
+        return np.mean(channels)
     else:
         return _do_psnr_per_channel(original, new)
 
