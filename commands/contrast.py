@@ -8,7 +8,7 @@ def do_contrast(img: np.ndarray, args: dict) -> np.ndarray:
         factor = float(val)
     except:
         raise Exception("Factor must be a floating point number")
-    if factor < 0:
+    if factor <=0:
         raise ValueError("Factor must be higher than 0")
     
 
