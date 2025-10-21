@@ -1,6 +1,6 @@
 import numpy as np
 
-def do_min_filer(img: np.ndarray, args: dict) -> np.ndarray:
+def do_max_filer(img: np.ndarray, args: dict) -> np.ndarray:
     window_size_str = args.get("-window", 3)
     window_size = int(window_size_str)
     if (window_size%2==0 or window_size%2==0):
