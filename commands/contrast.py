@@ -1,14 +1,15 @@
 import numpy as np
 
 def do_contrast(img: np.ndarray, args: dict) -> np.ndarray:
-    val = args.get('--factor')
+    val = args.get('-factor')
     if val is None:
         raise ValueError("No factor given.\n")
     try:
         factor = float(val)
     except:
         raise Exception("Factor must be a floating point number")
-    if factor <=0:
+
+    if factor <= 0:
         raise ValueError("Factor must be higher than 0")
     
 

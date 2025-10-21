@@ -26,6 +26,7 @@ def do_adaptive_noise_filter(img:np.array, args:dict):
         channels = []
         for ch in range(img.shape[2]): #3
             filtered_channel = _adaptive_noise_filter_single_channel(img[:, :, ch], sMin, sMax)
+
             channels.append(filtered_channel)
         return np.stack(channels , axis = 2)  
     else:
