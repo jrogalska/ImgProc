@@ -1,0 +1,43 @@
+Impulse 1 color
+py main.py --adaptive -input="./images/lenac_impulse1.bmp" -output="./amf/color/lenac_impulse1_3_5.bmp" -sMin=3 -sMax=5
+
+py main.py --adaptive -input="./images/lenac_impulse1.bmp" -output="./amf/color/lenac_impulse1_3_11.bmp" -sMin=3 -sMax=11
+
+py main.py --adaptive -input="./images/lenac_impulse1.bmp" -output="./amf/color/lenac_impulse1_5_7.bmp" -sMin=5 -sMax=7
+
+py main.py --adaptive -input="./images/lenac_impulse1.bmp" -output="./amf/color/lenac_impulse1_7_11.bmp" -sMin=7 -sMax=11
+
+Impulse 3 color
+py main.py --adaptive -input="./images/lenac_impulse3.bmp" -output="./amf/color/lenac_impulse3_3_5.bmp" -sMin=3 -sMax=5
+
+py main.py --adaptive -input="./images/lenac_impulse3.bmp" -output="./amf/color/lenac_impulse3_3_11.bmp" -sMin=3 -sMax=11
+
+py main.py --adaptive -input="./images/lenac_impulse3.bmp" -output="./amf/color/lenac_impulse3_5_7.bmp" -sMin=5 -sMax=7
+
+py main.py --adaptive -input="./images/lenac_impulse3.bmp" -output="./amf/color/lenac_impulse3_7_11.bmp" -sMin=7 -sMax=11
+
+
+
+/////////////////
+Impulse1 grey
+py main.py --adaptive -input="./images/lena_impulse1.bmp" -output="./amf/color/lenag_impulse1_3_5.bmp" -sMin=3 -sMax=5
+
+py main.py --adaptive -input="./images/lena_impulse1.bmp" -output="./amf/color/lenag_impulse1_3_11.bmp" -sMin=3 -sMax=11
+
+py main.py --adaptive -input="./images/lena_impulse1.bmp" -output="./amf/color/lenag_impulse1_5_7.bmp" -sMin=5 -sMax=7
+
+py main.py --adaptive -input="./images/lena_impulse1.bmp" -output="./amf/color/lenag_impulse1_7_11.bmp" -sMin=7 -sMax=11
+
+Impulse3 grey
+py main.py --adaptive -input="./images/lena_impulse3.bmp" -output="./amf/color/lenag_impulse3_3_5.bmp" -sMin=3 -sMax=5
+
+py main.py --adaptive -input="./images/lena_impulse3.bmp" -output="./amf/color/lenag_impulse3_3_11.bmp" -sMin=3 -sMax=11
+
+py main.py --adaptive -input="./images/lena_impulse3.bmp" -output="./amf/color/lenag_impulse3_5_7.bmp" -sMin=5 -sMax=7
+
+py main.py --adaptive -input="./images/lena_impulse3.bmp" -output="./amf/color/lenag_impulse3_7_11.bmp" -sMin=7 -sMax=11
+
+
+///////////////////////////////////////////////
+
+py main

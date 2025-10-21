@@ -69,8 +69,8 @@ else:
         original = load_image(args.get('-original'))
         other = load_image(args.get('-other'))
         value = SIMILARITY[command](original, other)
-        print(str(value))
-
+        print(str(round(value,4)))
+        
     else:
         input_path = args.get('-input')
         output_path = args.get('-output')
