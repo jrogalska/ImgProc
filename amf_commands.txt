@@ -40,4 +40,187 @@ py main.py --adaptive -input="./images/lena_impulse3.bmp" -output="./amf/color/l
 
 ///////////////////////////////////////////////
 
-py main
+py main.py --mse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --mse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --mse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --mse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+py main.py --pmse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --pmse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --pmse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --pmse -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+py main.py --snr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --snr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --snr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --snr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+py main.py --psnr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --psnr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --psnr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --psnr -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+py main.py --md -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --md -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --md -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --md -original="./images/lenac_impulse1.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+
+
+---------------------------------------------------------------------
+
+py main.py --mse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --mse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --mse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --mse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+py main.py --pmse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --pmse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --pmse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --pmse -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+py main.py --snr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --snr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --snr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --snr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+py main.py --psnr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --psnr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --psnr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --psnr -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+py main.py --md -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_5.bmp"
+py main.py --md -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_3_11.bmp"
+py main.py --md -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_5_7.bmp"
+py main.py --md -original="./images/lenac_impulse3.bmp" -other="./amf/color/lenac_impulse1_7_11.bmp"
+
+
+
+----------------------------------------------------------------------------------
+
+
+
+
+
+
+py main.py --mse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --mse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --mse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --mse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+py main.py --pmse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --pmse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --pmse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --pmse -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+py main.py --snr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --snr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --snr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --snr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+py main.py --psnr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --psnr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --psnr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --psnr -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+py main.py --md -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --md -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --md -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --md -original="./images/lena_impulse1.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+------------------------------------------------------
+
+py main.py --mse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --mse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --mse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --mse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+py main.py --pmse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --pmse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --pmse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --pmse -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+py main.py --snr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --snr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --snr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --snr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+py main.py --psnr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --psnr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --psnr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --psnr -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+py main.py --md -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_5.bmp"
+py main.py --md -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_3_11.bmp"
+py main.py --md -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_5_7.bmp"
+py main.py --md -original="./images/lena_impulse3.bmp" -other="./amf/color/lenag_impulse1_7_11.bmp"
+
+
+------------------------
+
+1611.8693
+
+1610.8588
+
+1613.2231
+
+1612.736
+
+0.0248
+
+0.0248
+
+0.0248
+
+0.0248
+
+10.6815
+
+10.6842
+
+10.6778
+
+10.6792
+
+16.0575
+
+16.0602
+
+16.0539
+
+16.0552
+
+255.0
+
+230.0
+
+231.0
+
+231.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

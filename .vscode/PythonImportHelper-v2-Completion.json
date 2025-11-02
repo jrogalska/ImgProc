@@ -1,0 +1,492 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "PIL",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PIL",
+        "description": "PIL",
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDraw",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "log10",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "do_mean_square_error",
+        "importPath": "commands.mean_square_error",
+        "description": "commands.mean_square_error",
+        "isExtraImport": true,
+        "detail": "commands.mean_square_error",
+        "documentation": {}
+    },
+    {
+        "label": "do_mean_square_error",
+        "importPath": "commands.mean_square_error",
+        "description": "commands.mean_square_error",
+        "isExtraImport": true,
+        "detail": "commands.mean_square_error",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "importPath": "input_output",
+        "description": "input_output",
+        "isExtraImport": true,
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "save_image",
+        "importPath": "input_output",
+        "description": "input_output",
+        "isExtraImport": true,
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "do_brightness",
+        "importPath": "commands.brightness",
+        "description": "commands.brightness",
+        "isExtraImport": true,
+        "detail": "commands.brightness",
+        "documentation": {}
+    },
+    {
+        "label": "do_help",
+        "importPath": "commands.help",
+        "description": "commands.help",
+        "isExtraImport": true,
+        "detail": "commands.help",
+        "documentation": {}
+    },
+    {
+        "label": "do_contrast",
+        "importPath": "commands.contrast",
+        "description": "commands.contrast",
+        "isExtraImport": true,
+        "detail": "commands.contrast",
+        "documentation": {}
+    },
+    {
+        "label": "do_negative",
+        "importPath": "commands.negative",
+        "description": "commands.negative",
+        "isExtraImport": true,
+        "detail": "commands.negative",
+        "documentation": {}
+    },
+    {
+        "label": "do_horizontal_flip",
+        "importPath": "commands.horizontal",
+        "description": "commands.horizontal",
+        "isExtraImport": true,
+        "detail": "commands.horizontal",
+        "documentation": {}
+    },
+    {
+        "label": "do_vertical_flip",
+        "importPath": "commands.vertical",
+        "description": "commands.vertical",
+        "isExtraImport": true,
+        "detail": "commands.vertical",
+        "documentation": {}
+    },
+    {
+        "label": "do_diagonal_flip",
+        "importPath": "commands.diagonal",
+        "description": "commands.diagonal",
+        "isExtraImport": true,
+        "detail": "commands.diagonal",
+        "documentation": {}
+    },
+    {
+        "label": "do_adaptive_noise_filter",
+        "importPath": "commands.adaptive",
+        "description": "commands.adaptive",
+        "isExtraImport": true,
+        "detail": "commands.adaptive",
+        "documentation": {}
+    },
+    {
+        "label": "do_shrinking",
+        "importPath": "commands.shrinking",
+        "description": "commands.shrinking",
+        "isExtraImport": true,
+        "detail": "commands.shrinking",
+        "documentation": {}
+    },
+    {
+        "label": "do_enlargement",
+        "importPath": "commands.enlargement",
+        "description": "commands.enlargement",
+        "isExtraImport": true,
+        "detail": "commands.enlargement",
+        "documentation": {}
+    },
+    {
+        "label": "do_min_filer",
+        "importPath": "commands.min",
+        "description": "commands.min",
+        "isExtraImport": true,
+        "detail": "commands.min",
+        "documentation": {}
+    },
+    {
+        "label": "do_max_filer",
+        "importPath": "commands.max",
+        "description": "commands.max",
+        "isExtraImport": true,
+        "detail": "commands.max",
+        "documentation": {}
+    },
+    {
+        "label": "do_peak_mse",
+        "importPath": "commands.peak_mse",
+        "description": "commands.peak_mse",
+        "isExtraImport": true,
+        "detail": "commands.peak_mse",
+        "documentation": {}
+    },
+    {
+        "label": "do_signal_to_noise",
+        "importPath": "commands.signal_to_noise_ratio",
+        "description": "commands.signal_to_noise_ratio",
+        "isExtraImport": true,
+        "detail": "commands.signal_to_noise_ratio",
+        "documentation": {}
+    },
+    {
+        "label": "do_max_difference",
+        "importPath": "commands.max_difference",
+        "description": "commands.max_difference",
+        "isExtraImport": true,
+        "detail": "commands.max_difference",
+        "documentation": {}
+    },
+    {
+        "label": "do_psnr",
+        "importPath": "commands.psnr",
+        "description": "commands.psnr",
+        "isExtraImport": true,
+        "detail": "commands.psnr",
+        "documentation": {}
+    },
+    {
+        "label": "do_histogram",
+        "importPath": "commands.histogram",
+        "description": "commands.histogram",
+        "isExtraImport": true,
+        "detail": "commands.histogram",
+        "documentation": {}
+    },
+    {
+        "label": "do_adaptive_noise_filter",
+        "kind": 2,
+        "importPath": "commands.adaptive",
+        "description": "commands.adaptive",
+        "peekOfCode": "def do_adaptive_noise_filter(img: np.ndarray, args: dict):\n    sMax = int(args.get(\"-sMax\", 9))\n    sMin = int(args.get(\"-sMin\", 3))\n    if (sMax % 2 == 0 or sMin % 2 == 0):\n        raise ValueError(\"Window size must be an odd number\")\n    if not (sMax >= sMin >= 3):\n        raise ValueError(\"Window size must be sMax>=sMin>=3\")\n    orig_dtype = img.dtype\n    if img.ndim == 3:\n        channels = []",
+        "detail": "commands.adaptive",
+        "documentation": {}
+    },
+    {
+        "label": "do_brightness",
+        "kind": 2,
+        "importPath": "commands.brightness",
+        "description": "commands.brightness",
+        "peekOfCode": "def do_brightness(img: np.ndarray, args: dict) -> np.ndarray:\n    const = int(args.get('-const'))\n    if const is None:\n        print(\"No constant given. \\n\")\n        return\n    if not (-255 <= const <= 255):\n        print(\"Constant must be between -255 and 255. \\n\")\n        return\n    else:\n        newImg = img + const",
+        "detail": "commands.brightness",
+        "documentation": {}
+    },
+    {
+        "label": "do_contrast",
+        "kind": 2,
+        "importPath": "commands.contrast",
+        "description": "commands.contrast",
+        "peekOfCode": "def do_contrast(img: np.ndarray, args: dict) -> np.ndarray:\n    val = args.get('-factor')\n    if val is None:\n        raise ValueError(\"No factor given.\\n\")\n    try:\n        factor = float(val)\n    except:\n        raise Exception(\"Factor must be a floating point number\")\n    if factor <= 0:\n        raise ValueError(\"Factor must be higher than 0\")",
+        "detail": "commands.contrast",
+        "documentation": {}
+    },
+    {
+        "label": "do_diagonal_flip",
+        "kind": 2,
+        "importPath": "commands.diagonal",
+        "description": "commands.diagonal",
+        "peekOfCode": "def do_diagonal_flip(img: np.ndarray, args: dict) -> np.ndarray:\n    return np.flip(img, (0,1))",
+        "detail": "commands.diagonal",
+        "documentation": {}
+    },
+    {
+        "label": "do_enlargement",
+        "kind": 2,
+        "importPath": "commands.enlargement",
+        "description": "commands.enlargement",
+        "peekOfCode": "def do_enlargement(img: np.ndarray, args: dict) -> np.ndarray:\n    factor = int(args.get('-factor'))\n    return np.repeat(np.repeat(img, factor, 0), factor, 1)",
+        "detail": "commands.enlargement",
+        "documentation": {}
+    },
+    {
+        "label": "do_help",
+        "kind": 2,
+        "importPath": "commands.help",
+        "description": "commands.help",
+        "peekOfCode": "def do_help():\n    print(\"Available commands: \\n \\n\")\n    print(\"--help \\n Prints this message with all commands and their arguments\")\n    print(\"--brightness \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -const=<value>    Brightness adjustment constant (integer between -255 and 255) \\n\")\n    print(\"--contrast \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -factor=<value>   Contrast adjustment factor (float, e.g., 1.2 for increase, 0.8 for decrease) \\n\")\n    print(\"--negative \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--hflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--vflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--dflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--adaptive \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -sMin=<value default 3> minimum window size \\n -sMax=<value default 9> maximum window size\")",
+        "detail": "commands.help",
+        "documentation": {}
+    },
+    {
+        "label": "do_histogram",
+        "kind": 2,
+        "importPath": "commands.histogram",
+        "description": "commands.histogram",
+        "peekOfCode": "def do_histogram(\n    img: np.ndarray,\n    args: dict[str, str]\n) -> Image.Image:\n    # --- args ---\n    ch = args.get('-channel', 'y').lower()\n    num_bins = int(args.get('-bins', '256'))\n    plot_h = int(args.get('-height', '200'))\n    plot_w = int(args.get('-width', str(num_bins)))\n    bar_color = args.get('-color', 'black')",
+        "detail": "commands.histogram",
+        "documentation": {}
+    },
+    {
+        "label": "do_horizontal_flip",
+        "kind": 2,
+        "importPath": "commands.horizontal",
+        "description": "commands.horizontal",
+        "peekOfCode": "def do_horizontal_flip(img: np.ndarray, args: dict) -> np.ndarray:\n    return np.flip(img, axis=1)",
+        "detail": "commands.horizontal",
+        "documentation": {}
+    },
+    {
+        "label": "do_max_filer",
+        "kind": 2,
+        "importPath": "commands.max",
+        "description": "commands.max",
+        "peekOfCode": "def do_max_filer(img: np.ndarray, args: dict) -> np.ndarray:\n    window_size_str = args.get(\"-window\", 3)\n    window_size = int(window_size_str)\n    if (window_size%2==0 or window_size%2==0):\n        raise ValueError(\"Window size cannot be a number divisible by 2\")\n    m = int((window_size - 1) / 2)\n    img2 = np.copy(img)\n    if img.ndim == 3:\n        for c in range(img.shape[2]):\n            for i in range(m, img.shape[0] - m):",
+        "detail": "commands.max",
+        "documentation": {}
+    },
+    {
+        "label": "do_max_difference",
+        "kind": 2,
+        "importPath": "commands.max_difference",
+        "description": "commands.max_difference",
+        "peekOfCode": "def do_max_difference(original_img: np.ndarray, other_img: np.ndarray):\n    if original_img.shape != other_img.shape:\n        raise ValueError(\"The images must have the same sizes.\")\n    md = np.max(np.abs(original_img.astype('float') - other_img.astype('float')))\n    return md",
+        "detail": "commands.max_difference",
+        "documentation": {}
+    },
+    {
+        "label": "do_mean_square_error",
+        "kind": 2,
+        "importPath": "commands.mean_square_error",
+        "description": "commands.mean_square_error",
+        "peekOfCode": "def do_mean_square_error(orignal_img: np.ndarray, other_img: np.ndarray):\n    if orignal_img.shape != other_img.shape:\n        raise ValueError(\"The images must have the same sizes.\")\n    difference = orignal_img.astype(\"float\") - other_img.astype(\"float\")\n    squared = np.square(difference)\n    mse = np.mean(squared)\n    return mse",
+        "detail": "commands.mean_square_error",
+        "documentation": {}
+    },
+    {
+        "label": "do_min_filer",
+        "kind": 2,
+        "importPath": "commands.min",
+        "description": "commands.min",
+        "peekOfCode": "def do_min_filer(img: np.ndarray, args: dict) -> np.ndarray:\n    window_size_str = args.get(\"-window\", 3)\n    window_size = int(window_size_str)\n    if (window_size%2==0 or window_size%2==0):\n        raise ValueError(\"Window size cannot be a number divisible by 2\")\n    m = int((window_size - 1) / 2)\n    img2 = np.copy(img)\n    if img.ndim == 3:\n        for c in range(img.shape[2]):\n            for i in range(m, img.shape[0] - m):",
+        "detail": "commands.min",
+        "documentation": {}
+    },
+    {
+        "label": "do_negative",
+        "kind": 2,
+        "importPath": "commands.negative",
+        "description": "commands.negative",
+        "peekOfCode": "def do_negative(img: np.ndarray, args: dict) -> np.ndarray:\n    x = np.arange(256, dtype=np.float32)\n    lut = 255 - x\n    lut = np.clip(lut, 0, 255).astype(np.uint8)\n    idx = img.astype(np.uint8, copy = False)\n    return np.take(lut, idx)",
+        "detail": "commands.negative",
+        "documentation": {}
+    },
+    {
+        "label": "do_peak_mse",
+        "kind": 2,
+        "importPath": "commands.peak_mse",
+        "description": "commands.peak_mse",
+        "peekOfCode": "def do_peak_mse(original_img:np.ndarray, other_img: np.ndarray):\n    max_value = np.max(original_img)\n    if max_value == 0:\n        pmse = 0\n    else:\n        pmse = do_mean_square_error(original_img, other_img)/np.square(max_value)\n    return pmse",
+        "detail": "commands.peak_mse",
+        "documentation": {}
+    },
+    {
+        "label": "do_psnr",
+        "kind": 2,
+        "importPath": "commands.psnr",
+        "description": "commands.psnr",
+        "peekOfCode": "def do_psnr(original: np.array, new:np.array):\n    original = original.astype(np.float64)\n    new = new.astype(np.float64)\n    if new.shape!=original.shape:\n        raise ValueError(\"Images need to be the same type and size!\")\n    if original.ndim==3:\n        channels = []\n        for ch in range(new.shape[2]):\n            calculated = _do_psnr_per_channel(original[:, :, ch], new[:, :, ch])\n            channels.append(calculated)",
+        "detail": "commands.psnr",
+        "documentation": {}
+    },
+    {
+        "label": "do_shrinking",
+        "kind": 2,
+        "importPath": "commands.shrinking",
+        "description": "commands.shrinking",
+        "peekOfCode": "def do_shrinking(img: np.ndarray, args:dict) -> np.ndarray:\n    factor = int(args.get('-factor'))\n    return img[::factor,::factor] #przejdź przez cały array z step =factor (pomijamy co druga kolumne i co drugi rzad)",
+        "detail": "commands.shrinking",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def  do_signal_to_noise(original_img: np.ndarray, other_img: np.ndarray):\n    if original_img.shape != other_img.shape:\n        raise ValueError(\"The images must have the same sizes.\")\n    signal = np.sum(np.square(original_img.astype('float')))\n    noise = np.sum(np.square(original_img.astype('float') - other_img.astype('float')))\n    if noise == 0:\n        snr = np.inf\n    else:\n        snr = 10 * np.log10(signal / noise)    \n    return snr"
+        },
+        "kind": 2,
+        "importPath": "commands.signal_to_noise_ratio",
+        "description": "commands.signal_to_noise_ratio",
+        "peekOfCode": "def  do_signal_to_noise(original_img: np.ndarray, other_img: np.ndarray):\n    if original_img.shape != other_img.shape:\n        raise ValueError(\"The images must have the same sizes.\")\n    signal = np.sum(np.square(original_img.astype('float')))\n    noise = np.sum(np.square(original_img.astype('float') - other_img.astype('float')))\n    if noise == 0:\n        snr = np.inf\n    else:\n        snr = 10 * np.log10(signal / noise)    \n    return snr",
+        "detail": "commands.signal_to_noise_ratio",
+        "documentation": {}
+    },
+    {
+        "label": "do_vertical_flip",
+        "kind": 2,
+        "importPath": "commands.vertical",
+        "description": "commands.vertical",
+        "peekOfCode": "def do_vertical_flip(img: np.ndarray, args: dict) -> np.ndarray:\n    return np.flip(img, axis=0)",
+        "detail": "commands.vertical",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "kind": 2,
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "peekOfCode": "def compute_histogram(img: np.ndarray, channel: str, num_bins: int = 256) -> tuple[np.ndarray, np.ndarray, int]:\n    if img.ndim != 2:\n        raise ValueError(\"Input must be a 2D array representing a single image channel.\")\n    h = np.bincount(img.ravel(), minlength=num_bins).astype(np.int64)\n    cdf = np.cumsum(h)\n    n = int(h.sum())\n    return h, cdf, n",
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "kind": 2,
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "peekOfCode": "def extract_channel(img: np.ndarray, channel: str) -> np.ndarray:\n    if img.dtype != np.uint8:\n        raise TypeError(\"Oczekuję uint8.\")\n    if img.ndim == 2:  \n        return img\n    if img.ndim != 3 or img.shape[2] < 3:\n        raise ValueError(\"Expected an image with at least 3 channels.\")\n    ch = channel.lower()\n    R, G, B = img[...,0], img[...,1], img[...,2]\n    if ch == \"r\": return R",
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "input_output",
+        "description": "input_output",
+        "peekOfCode": "def load_image(path: str) -> np.ndarray:\n    try:\n        img = Image.open(path)\n        if img.mode == \"P\":\n            img = img.convert(\"RGB\") # paletted image\n        elif img.mode == \"LA\": #grayscale with alpha\n            img = img.convert(\"L\")\n        elif img.mode == \"RGBA\": #rgb with alpha\n            img = img.convert(\"RGB\") #drop alpha channel\n        elif img.mode not in (\"L\", \"RGB\"):",
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "save_image",
+        "kind": 2,
+        "importPath": "input_output",
+        "description": "input_output",
+        "peekOfCode": "def save_image(path: str, img):\n    if isinstance(img, np.ndarray):\n        save_image_arr(path, img)\n    elif isinstance(img, PIL.Image.Image):\n        save_image_pil(path, img)\n    else:\n        raise TypeError(\"Unsupported image type for saving.\")\ndef save_image_arr(path: str, arr: np.ndarray):\n    try:\n        newImg = Image.fromarray(arr.astype(np.uint8))",
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "save_image_arr",
+        "kind": 2,
+        "importPath": "input_output",
+        "description": "input_output",
+        "peekOfCode": "def save_image_arr(path: str, arr: np.ndarray):\n    try:\n        newImg = Image.fromarray(arr.astype(np.uint8))\n        newImg.show() \n        newImg.save(path)\n    except Exception as e:\n        print(\"Error saving image. Check the file path. \\n\")\n        print(e)\n        raise SystemExit(3)\ndef save_image_pil(path:str, img: PIL.Image.Image):",
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "save_image_pil",
+        "kind": 2,
+        "importPath": "input_output",
+        "description": "input_output",
+        "peekOfCode": "def save_image_pil(path:str, img: PIL.Image.Image):\n    try:\n        img.save(path)\n    except Exception as e:\n        print(\"Error saving image. Check the file path. \\n\")\n        print(e)\n        raise SystemExit(3  )",
+        "detail": "input_output",
+        "documentation": {}
+    },
+    {
+        "label": "COMMANDS",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "COMMANDS = {\n    \"--brightness\": do_brightness,\n    \"--help\": do_help,\n    \"--contrast\": do_contrast,\n    \"--hflip\": do_horizontal_flip,\n    \"--negative\": do_negative,\n    \"--vflip\": do_vertical_flip,\n    \"--dflip\": do_diagonal_flip,\n    \"--adaptive\": do_adaptive_noise_filter,\n    \"--shrink\": do_shrinking,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SIMILARITY",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SIMILARITY = {\n    \"--mse\": do_mean_square_error,\n    \"--pmse\": do_peak_mse,\n    \"--snr\": do_signal_to_noise,\n    \"--psnr\": do_psnr,\n    \"--md\": do_max_difference\n}\nif len(sys.argv) == 1:\n    print(\"No command line parameters given.\\n\")\n    sys.exit()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "command = sys.argv[1]\nif command == '--help':\n    do_help()\nelse:\n    if len(sys.argv) == 2:\n        print(\"Too few command line parameters given.\\n\")\n        sys.exit()\n    args = {}\n    for arg in sys.argv[2:]:\n        if '=' in arg:",
+        "detail": "main",
+        "documentation": {}
+    }
+]

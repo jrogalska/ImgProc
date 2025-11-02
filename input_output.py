@@ -1,4 +1,5 @@
 from PIL import Image
+import PIL
 import numpy as np
 
 def load_image(path: str) -> np.ndarray:
@@ -23,11 +24,20 @@ def load_image(path: str) -> np.ndarray:
     else:
         numColorChannels = arr.shape[1]
         arr = arr.reshape(img.size[1], img.size[0], numColorChannels)
-    arr = arr.astype(np.float32)
+    arr = arr.astype(np.uint8)
     return arr 
 
 
-def save_image(path: str, arr: np.ndarray):
+def save_image(path: str, img):
+    if isinstance(img, np.ndarray):
+        save_image_arr(path, img)
+    elif isinstance(img, PIL.Image.Image):
+        save_image_pil(path, img)
+    else:
+        raise TypeError("Unsupported image type for saving.")
+    
+
+def save_image_arr(path: str, arr: np.ndarray):
     try:
         newImg = Image.fromarray(arr.astype(np.uint8))
         newImg.show() 
@@ -36,3 +46,11 @@ def save_image(path: str, arr: np.ndarray):
         print("Error saving image. Check the file path. \n")
         print(e)
         raise SystemExit(3)
+    
+def save_image_pil(path:str, img: PIL.Image.Image):
+    try:
+        img.save(path)
+    except Exception as e:
+        print("Error saving image. Check the file path. \n")
+        print(e)
+        raise SystemExit(3  )
