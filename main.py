@@ -17,6 +17,7 @@ from commands.peak_mse import do_peak_mse
 from commands.signal_to_noise_ratio import do_signal_to_noise
 from commands.max_difference import do_max_difference
 from commands.psnr import do_psnr
+from commands.histogram import do_histogram
 
 COMMANDS = {
     "--brightness": do_brightness,
@@ -31,6 +32,7 @@ COMMANDS = {
     "--enlarge": do_enlargement,
     "--min": do_min_filer,
     "--max": do_max_filer,
+    "--histogram": do_histogram
 }
 
 SIMILARITY = {
@@ -68,8 +70,8 @@ else:
         original = load_image(args.get('-original'))
         other = load_image(args.get('-other'))
         value = SIMILARITY[command](original, other)
-        print(str(value))
-
+        print(str(round(value,4)))
+        
     else:
         input_path = args.get('-input')
         output_path = args.get('-output')
@@ -83,3 +85,5 @@ else:
             print("Command not found.\n")
 
     print("")
+
+
