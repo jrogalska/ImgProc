@@ -18,7 +18,11 @@ from commands.signal_to_noise_ratio import do_signal_to_noise
 from commands.max_difference import do_max_difference
 from commands.psnr import do_psnr
 from commands.histogram import do_histogram
+from commands.hhyper import do_hhyper
+"""
+TASK VARIANTS:
 
+"""
 COMMANDS = {
     "--brightness": do_brightness,
     "--help": do_help,
@@ -32,7 +36,8 @@ COMMANDS = {
     "--enlarge": do_enlargement,
     "--min": do_min_filer,
     "--max": do_max_filer,
-    "--histogram": do_histogram
+    "--histogram": do_histogram,
+    "--hhyper": do_hhyper
 }
 
 SIMILARITY = {

@@ -27,7 +27,7 @@ def do_histogram(
     
 
     chan = extract_channel(img, ch)  # powinien zwrócić 2D ndarray
-    h, cdf, n = compute_histogram(chan.astype(np.uint8), ch, num_bins)
+    h, cdf, n = compute_histogram(chan.astype(np.uint8),  num_bins)
     h = np.asarray(h, dtype=np.float64)
 
     vmax = float(h.max()) if h.size else 0.0

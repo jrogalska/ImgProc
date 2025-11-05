@@ -9,6 +9,22 @@
         "documentation": {}
     },
     {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
         "label": "PIL",
         "kind": 6,
         "isExtraImport": true,
@@ -55,14 +71,6 @@
         "description": "utils.extract_channel",
         "isExtraImport": true,
         "detail": "utils.extract_channel",
-        "documentation": {}
-    },
-    {
-        "label": "compute_histogram",
-        "importPath": "utils.compute_histogram",
-        "description": "utils.compute_histogram",
-        "isExtraImport": true,
-        "detail": "utils.compute_histogram",
         "documentation": {}
     },
     {
@@ -243,6 +251,14 @@
         "documentation": {}
     },
     {
+        "label": "do_hhyper",
+        "importPath": "commands.hhyper",
+        "description": "commands.hhyper",
+        "isExtraImport": true,
+        "detail": "commands.hhyper",
+        "documentation": {}
+    },
+    {
         "label": "do_adaptive_noise_filter",
         "kind": 2,
         "importPath": "commands.adaptive",
@@ -294,6 +310,15 @@
         "description": "commands.help",
         "peekOfCode": "def do_help():\n    print(\"Available commands: \\n \\n\")\n    print(\"--help \\n Prints this message with all commands and their arguments\")\n    print(\"--brightness \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -const=<value>    Brightness adjustment constant (integer between -255 and 255) \\n\")\n    print(\"--contrast \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -factor=<value>   Contrast adjustment factor (float, e.g., 1.2 for increase, 0.8 for decrease) \\n\")\n    print(\"--negative \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--hflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--vflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--dflip \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n\")\n    print(\"--adaptive \\n -input=<path>    Path to the input image \\n -output=<path>   Path to save the image \\n -sMin=<value default 3> minimum window size \\n -sMax=<value default 9> maximum window size\")",
         "detail": "commands.help",
+        "documentation": {}
+    },
+    {
+        "label": "do_hhyper",
+        "kind": 2,
+        "importPath": "commands.hhyper",
+        "description": "commands.hhyper",
+        "peekOfCode": "def do_hhyper(img: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    if img.dtype != np.uint8:\n        raise ValueError(\"Expected uint8 image\")\n    gmin = int(args.get('-gmin', 64))\n    gmax = int(args.get('-gmax', 255))\n    # Gray\n    if img.ndim == 2:\n        ch = img\n        _, cdf, n = compute_histogram(ch, num_bins=256)\n        if n == 0:",
+        "detail": "commands.hhyper",
         "documentation": {}
     },
     {
@@ -413,7 +438,7 @@
         "kind": 2,
         "importPath": "utils.compute_histogram",
         "description": "utils.compute_histogram",
-        "peekOfCode": "def compute_histogram(img: np.ndarray, channel: str, num_bins: int = 256) -> tuple[np.ndarray, np.ndarray, int]:\n    if img.ndim != 2:\n        raise ValueError(\"Input must be a 2D array representing a single image channel.\")\n    h = np.bincount(img.ravel(), minlength=num_bins).astype(np.int64)\n    cdf = np.cumsum(h)\n    n = int(h.sum())\n    return h, cdf, n",
+        "peekOfCode": "def compute_histogram(img: np.ndarray,  num_bins: int = 256) -> tuple[np.ndarray, np.ndarray, int]:\n    \"\"\"\n    Computes the histogram of the given image channel (2D numpy array).\n    Args:\n        img (np.ndarray): 2D array representing the image channel.\n        num_bins (int): Number of bins for the histogram (default is 256).\n    Returns:\n        tuple[np.ndarray, np.ndarray, int]: A tuple containing:\n            - h (np.ndarray): Histogram array of shape (num_bins,).\n            - cdf (np.ndarray): Cumulative distribution function array of shape (num_bins,).",
         "detail": "utils.compute_histogram",
         "documentation": {}
     },
