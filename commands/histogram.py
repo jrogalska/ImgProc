@@ -38,7 +38,6 @@ def do_histogram(
     img_out = Image.new("RGB", (W, H), bg_color)
     draw = ImageDraw.Draw(img_out)
 
-    # --- geometra wykresu ---
     bins = len(h)
     plot_left = margin
     plot_top = margin
@@ -64,11 +63,9 @@ def do_histogram(
         if hpx <= 0:
             continue
 
-        # pozycja na osi X – środek binu i
         x_center = plot_left + i * ideal_bin_w + ideal_bin_w / 2.0
         x0 = int(round(x_center - bar_w / 2.0))
         x1 = int(round(x_center + bar_w / 2.0))
-        # clamp do obszaru rysowania
         x0 = max(plot_left, min(x0, plot_right - 1))
         x1 = max(x0 + 1, min(x1, plot_right))
 

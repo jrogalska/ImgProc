@@ -24,7 +24,6 @@ def do_hhyper(img: np.ndarray, args: dict[str, str]) -> np.ndarray:
         lut = _build_lut_from_cdf(cdf, gmin, gmax)
         return lut[ch]
 
-    # Per-channel (np.uint8, dowolna liczba kanałów)
     if img.ndim == 3:
         H, W, C = img.shape
         out = np.empty_like(img)
