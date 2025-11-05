@@ -25,6 +25,150 @@
         "documentation": {}
     },
     {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "compute_histogram",
+        "importPath": "utils.compute_histogram",
+        "description": "utils.compute_histogram",
+        "isExtraImport": true,
+        "detail": "utils.compute_histogram",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "extract_channel",
+        "importPath": "utils.extract_channel",
+        "description": "utils.extract_channel",
+        "isExtraImport": true,
+        "detail": "utils.extract_channel",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "as_gray",
+        "importPath": "utils.to_luminance",
+        "description": "utils.to_luminance",
+        "isExtraImport": true,
+        "detail": "utils.to_luminance",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvariance",
+        "importPath": "commands.image_characteristics.cvariance",
+        "description": "commands.image_characteristics.cvariance",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cvariance",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvariance",
+        "importPath": "commands.image_characteristics.cvariance",
+        "description": "commands.image_characteristics.cvariance",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cvariance",
+        "documentation": {}
+    },
+    {
         "label": "PIL",
         "kind": 6,
         "isExtraImport": true,
@@ -55,22 +199,6 @@
         "description": "PIL",
         "isExtraImport": true,
         "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "log10",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "extract_channel",
-        "importPath": "utils.extract_channel",
-        "description": "utils.extract_channel",
-        "isExtraImport": true,
-        "detail": "utils.extract_channel",
         "documentation": {}
     },
     {
@@ -259,6 +387,135 @@
         "documentation": {}
     },
     {
+        "label": "do_cmean",
+        "importPath": "commands.image_characteristics.cmean",
+        "description": "commands.image_characteristics.cmean",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cmean",
+        "documentation": {}
+    },
+    {
+        "label": "do_cstdev",
+        "importPath": "commands.image_characteristics.cstdev",
+        "description": "commands.image_characteristics.cstdev",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cstdev",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvarcoi",
+        "importPath": "commands.image_characteristics.cvarcoi",
+        "description": "commands.image_characteristics.cvarcoi",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cvarcoi",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvarcoii",
+        "importPath": "commands.image_characteristics.cvarcoii",
+        "description": "commands.image_characteristics.cvarcoii",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cvarcoii",
+        "documentation": {}
+    },
+    {
+        "label": "do_casyco",
+        "importPath": "commands.image_characteristics.casyco",
+        "description": "commands.image_characteristics.casyco",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.casyco",
+        "documentation": {}
+    },
+    {
+        "label": "do_cflattening",
+        "importPath": "commands.image_characteristics.cflattening",
+        "description": "commands.image_characteristics.cflattening",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.cflattening",
+        "documentation": {}
+    },
+    {
+        "label": "do_casyco",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.casyco",
+        "description": "commands.image_characteristics.casyco",
+        "peekOfCode": "def do_casyco(image: np.ndarray, args:dict[str, str]) -> float:\n    ch = args.get('-channel', 'y')\n    image = extract_channel(image, channel=ch)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")\n    m = np.arange(256, dtype=np.float64)\n    s1 = float(np.sum(h * m))\n    s2 = float(np.sum(h * (m ** 2)))\n    s3 = float(np.sum(h * (m ** 3)))",
+        "detail": "commands.image_characteristics.casyco",
+        "documentation": {}
+    },
+    {
+        "label": "do_centropy",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.centropy",
+        "description": "commands.image_characteristics.centropy",
+        "peekOfCode": "def do_centropy(image: np.ndarray, args: dict[str, str]) -> float:\n    channel = args.get('-channel', 'y')\n    image = extract_channel(image, channel=channel)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")\n    p = h / n\n    p_nonzero = p[p > 0]\n    ent = -np.sum(p_nonzero * np.log2(p_nonzero))\n    return float(ent)",
+        "detail": "commands.image_characteristics.centropy",
+        "documentation": {}
+    },
+    {
+        "label": "do_cflattening",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cflattening",
+        "description": "commands.image_characteristics.cflattening",
+        "peekOfCode": "def do_cflattening(image, args:dict[str, str]) :\n    ch = args.get('-channel', 'y')\n    image = extract_channel(image, channel=ch)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")\n    m = np.arange(256, dtype=np.float64)\n    s1 = float(np.sum(h * m))\n    s2 = float(np.sum(h * (m ** 2)))\n    s3 = float(np.sum(h * (m ** 3)))",
+        "detail": "commands.image_characteristics.cflattening",
+        "documentation": {}
+    },
+    {
+        "label": "do_cmean",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cmean",
+        "description": "commands.image_characteristics.cmean",
+        "peekOfCode": "def do_cmean(image: np.ndarray, args:dict[str, str]) -> float:\n    if image.size == 0:\n        return float(\"nan\")\n    if image.ndim not in (2, 3):\n        raise ValueError(\"Expected 2D (gray) or 3D (RGB) image\")\n    channel: Optional[str] = args.get('-channel', 'y')\n    x = as_gray(image, channel=channel)\n    return float(np.mean(x))",
+        "detail": "commands.image_characteristics.cmean",
+        "documentation": {}
+    },
+    {
+        "label": "do_cstdev",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cstdev",
+        "description": "commands.image_characteristics.cstdev",
+        "peekOfCode": "def do_cstdev(image: np.ndarray, args:dict[str, str]) -> float:\n    cvar = do_cvariance(image, args)\n    if np.isnan(cvar):\n        return float(\"nan\")\n    return float(np.sqrt(cvar))",
+        "detail": "commands.image_characteristics.cstdev",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvarcoi",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cvarcoi",
+        "description": "commands.image_characteristics.cvarcoi",
+        "peekOfCode": "def do_cvarcoi(image: np.ndarray, args: dict[str, str]) -> float:\n    \"\"\"\n    Variation coefficient I: sigma / mean\n    Liczone z jednego histogramu (wariancja populacyjna).\n    \"\"\"\n    ch = (args.get(\"-channel\", \"y\") or \"y\").lower()\n    image = extract_channel(image, channel=ch)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")",
+        "detail": "commands.image_characteristics.cvarcoi",
+        "documentation": {}
+    },
+    {
+        "label": "_EPS",
+        "kind": 5,
+        "importPath": "commands.image_characteristics.cvarcoi",
+        "description": "commands.image_characteristics.cvarcoi",
+        "peekOfCode": "_EPS = 1e-12  # osłona na mean≈0 i szum numeryczny\ndef do_cvarcoi(image: np.ndarray, args: dict[str, str]) -> float:\n    \"\"\"\n    Variation coefficient I: sigma / mean\n    Liczone z jednego histogramu (wariancja populacyjna).\n    \"\"\"\n    ch = (args.get(\"-channel\", \"y\") or \"y\").lower()\n    image = extract_channel(image, channel=ch)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:",
+        "detail": "commands.image_characteristics.cvarcoi",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvarcoii",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cvarcoii",
+        "description": "commands.image_characteristics.cvarcoii",
+        "peekOfCode": "def do_cvarcoii(image: np.ndarray, args: dict[str, str]) -> float:\n    channel = args.get('-channel', 'y')\n    image = extract_channel(image, channel=channel)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")\n    h = h.astype(np.float64, copy=False)\n    num = float(np.dot(h,h))\n    val = num / (n*n)\n    return float(val)",
+        "detail": "commands.image_characteristics.cvarcoii",
+        "documentation": {}
+    },
+    {
+        "label": "do_cvariance",
+        "kind": 2,
+        "importPath": "commands.image_characteristics.cvariance",
+        "description": "commands.image_characteristics.cvariance",
+        "peekOfCode": "def do_cvariance(image: np.ndarray, args:dict[str, str]) -> float:\n    ch = args.get('-channel', 'y')\n    image = extract_channel(image, channel=ch)\n    h, cdf, n = compute_histogram(image)\n    if n == 0:\n        return float(\"nan\")\n    m = np.arange(256, dtype=np.float64)\n    s1 = float(np.sum(h * m)) \n    s2 = float(np.sum(h * (m ** 2))) \n    mean = s1 / n",
+        "detail": "commands.image_characteristics.cvariance",
+        "documentation": {}
+    },
+    {
         "label": "do_adaptive_noise_filter",
         "kind": 2,
         "importPath": "commands.adaptive",
@@ -326,7 +583,7 @@
         "kind": 2,
         "importPath": "commands.histogram",
         "description": "commands.histogram",
-        "peekOfCode": "def do_histogram(\n    img: np.ndarray,\n    args: dict[str, str]\n) -> Image.Image:\n    # --- args ---\n    ch = args.get('-channel', 'y').lower()\n    num_bins = int(args.get('-bins', '256'))\n    plot_h = int(args.get('-height', '200'))\n    plot_w = int(args.get('-width', str(num_bins)))\n    bar_color = args.get('-color', 'black')",
+        "peekOfCode": "def do_histogram(\n    img: np.ndarray,\n    args: dict[str, str]\n) -> Image.Image:\n    # --- args ---\n    ch         = args.get('-channel', 'y').lower()\n    num_bins   = 256\n    plot_h     = int(args.get('-height', '200'))\n    plot_w     = int(args.get('-width',  str(num_bins)))\n    bar_color  = args.get('-color', 'black')",
         "detail": "commands.histogram",
         "documentation": {}
     },
@@ -452,6 +709,24 @@
         "documentation": {}
     },
     {
+        "label": "as_gray",
+        "kind": 2,
+        "importPath": "utils.to_luminance",
+        "description": "utils.to_luminance",
+        "peekOfCode": "def as_gray(image: np.ndarray, channel: str=\"y\") -> np.ndarray:\n    if image.ndim == 2:\n        return image\n    elif image.ndim == 3:\n        rgb = image[..., :3]\n        if channel == \"y\":\n            x = np.tensordot(rgb.astype(np.float64), _YW, axes=([-1], [0]))\n        else:\n            idx = {\"r\": 0, \"g\": 1, \"b\": 2}.get(channel.lower())\n            if idx is None:",
+        "detail": "utils.to_luminance",
+        "documentation": {}
+    },
+    {
+        "label": "_YW",
+        "kind": 5,
+        "importPath": "utils.to_luminance",
+        "description": "utils.to_luminance",
+        "peekOfCode": "_YW = np.array([0.2126, 0.7152, 0.0722], dtype=np.float64)\ndef as_gray(image: np.ndarray, channel: str=\"y\") -> np.ndarray:\n    if image.ndim == 2:\n        return image\n    elif image.ndim == 3:\n        rgb = image[..., :3]\n        if channel == \"y\":\n            x = np.tensordot(rgb.astype(np.float64), _YW, axes=([-1], [0]))\n        else:\n            idx = {\"r\": 0, \"g\": 1, \"b\": 2}.get(channel.lower())",
+        "detail": "utils.to_luminance",
+        "documentation": {}
+    },
+    {
         "label": "load_image",
         "kind": 2,
         "importPath": "input_output",
@@ -501,7 +776,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SIMILARITY = {\n    \"--mse\": do_mean_square_error,\n    \"--pmse\": do_peak_mse,\n    \"--snr\": do_signal_to_noise,\n    \"--psnr\": do_psnr,\n    \"--md\": do_max_difference\n}\nif len(sys.argv) == 1:\n    print(\"No command line parameters given.\\n\")\n    sys.exit()",
+        "peekOfCode": "SIMILARITY = {\n    \"--mse\": do_mean_square_error,\n    \"--pmse\": do_peak_mse,\n    \"--snr\": do_signal_to_noise,\n    \"--psnr\": do_psnr,\n    \"--md\": do_max_difference\n}\nCHARACTERISTICS = {\n    \"--cmean\": do_cmean,\n    \"--cvariance\": do_cvariance,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "CHARACTERISTICS",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "CHARACTERISTICS = {\n    \"--cmean\": do_cmean,\n    \"--cvariance\": do_cvariance,\n    \"--cstdev\": do_cstdev,\n    \"--cvarcoi\": do_cvarcoi,\n    \"--cvarcoii\": do_cvarcoii,\n    \"--casyco\": do_casyco,\n    \"--cflattening\": do_cflattening\n}\nif len(sys.argv) == 1:",
         "detail": "main",
         "documentation": {}
     },

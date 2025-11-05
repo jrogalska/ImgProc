@@ -1,6 +1,5 @@
 from PIL import Image, ImageDraw
 import numpy as np
-from math import log10
 from utils.extract_channel import extract_channel
 from utils.compute_histogram import compute_histogram
 
@@ -15,62 +14,56 @@ def do_histogram(
     args: dict[str, str]
 ) -> Image.Image:
     # --- args ---
-    ch = args.get('-channel', 'y').lower()
-    num_bins = int(args.get('-bins', '256'))
-    plot_h = int(args.get('-height', '200'))
-    plot_w = int(args.get('-width', str(num_bins)))
-    bar_color = args.get('-color', 'black')
-    bg_color = args.get('-bgcolor', 'white')
-    margin = int(args.get('-border', '10'))
-    bar_w_arg = int(args.get('-barwidth', '10'))
-
-    
+    ch         = args.get('-channel', 'y').lower()
+    num_bins   = 256
+    plot_h     = int(args.get('-height', '200'))
+    plot_w     = int(args.get('-width',  str(num_bins)))
+    bar_color  = args.get('-color', 'black')
+    axis_color = args.get('-axiscolor', 'red')
+    bg_color   = args.get('-bgcolor', 'white')
+    margin     = int(args.get('-border', '10'))   #
 
     chan = extract_channel(img, ch)  # powinien zwrócić 2D ndarray
-    h, cdf, n = compute_histogram(chan.astype(np.uint8),  num_bins)
-    h = np.asarray(h, dtype=np.float64)
+    if chan.ndim != 2:
+        raise ValueError("Channel extraction did not return a 2D array.")
 
-    vmax = float(h.max()) if h.size else 0.0
+    h, cdf, n = compute_histogram(chan.astype(np.uint8), num_bins)
+    if n == 0 or len(h) == 0:
+        return Image.new("RGB", (plot_w, plot_h), bg_color)
+
+    inner_w = max(1, plot_w - 2 * margin)
+    inner_h = max(1, plot_h - 2 * margin)
+
+    # --- krok i szerokość słupka ---
+    bar_w = 1
+    auto_step = max(1, inner_w // num_bins)
 
 
-    W = plot_w + 2 * margin
-    H = plot_h + 2 * margin
-    img_out = Image.new("RGB", (W, H), bg_color)
-    draw = ImageDraw.Draw(img_out)
+    h_max = max(int(x) for x in h)
+    scale = inner_h / h_max if h_max > 0 else 1.0
 
-    bins = len(h)
-    plot_left = margin
-    plot_top = margin
-    plot_right = W - margin
-    plot_bottom = H - margin
-    plot_width = plot_right - plot_left
-    plot_height = plot_bottom - plot_top
+    # --- płótno i rysowanie ---
+    canvas = Image.new("RGB", (plot_w, plot_h), bg_color)
+    draw = ImageDraw.Draw(canvas)
 
-    ideal_bin_w = plot_width / max(1, bins)
-  
-    bar_w = bar_w_arg
+    baseline_y = plot_h - margin  # oś X 
+    x = margin
 
-    step = 1
-    total_needed = bar_w * bins
-    if total_needed > plot_width:
-        step = max(1, int(np.ceil(total_needed / plot_width)))
-        
-    for i in range(0, bins, step):
-        v = float(h[i])
-        if v <= 0.0:
-            continue
-        hpx = int((v / vmax) * plot_height)
-        if hpx <= 0:
-            continue
+    draw.line([(margin, baseline_y), (plot_w - margin, baseline_y)], fill=axis_color)
 
-        x_center = plot_left + i * ideal_bin_w + ideal_bin_w / 2.0
-        x0 = int(round(x_center - bar_w / 2.0))
-        x1 = int(round(x_center + bar_w / 2.0))
-        x0 = max(plot_left, min(x0, plot_right - 1))
-        x1 = max(x0 + 1, min(x1, plot_right))
+    for i in range(min(num_bins, len(h))):
+        height_px = int(round(h[i] * scale))
+        top_y = baseline_y - height_px
 
-        y1 = plot_bottom
-        y0 = max(plot_top, y1 - hpx)
-        draw.rectangle([x0, y0, x1, y1], fill=bar_color)
+        top_y = max(margin, top_y)
 
-    return img_out
+        x1 = min(plot_w - margin, x + bar_w)
+
+        if x < plot_w - margin and height_px > 0:
+            draw.rectangle([ (x, top_y), (x1-1, baseline_y-1) ], outline=bar_color)
+
+        x += auto_step
+        if x >= plot_w - margin:
+            break  
+
+    return canvas

@@ -19,6 +19,14 @@ from commands.max_difference import do_max_difference
 from commands.psnr import do_psnr
 from commands.histogram import do_histogram
 from commands.hhyper import do_hhyper
+from commands.image_characteristics.cmean import do_cmean
+from commands.image_characteristics.cvariance import do_cvariance
+from commands.image_characteristics.cstdev import do_cstdev
+from commands.image_characteristics.cvarcoi import do_cvarcoi
+from commands.image_characteristics.cvarcoii import do_cvarcoii
+from commands.image_characteristics.casyco import do_casyco
+from commands.image_characteristics.cflattening import do_cflattening
+
 """
 TASK VARIANTS:
 
@@ -46,6 +54,15 @@ SIMILARITY = {
     "--snr": do_signal_to_noise,
     "--psnr": do_psnr,
     "--md": do_max_difference
+}
+CHARACTERISTICS = {
+    "--cmean": do_cmean,
+    "--cvariance": do_cvariance,
+    "--cstdev": do_cstdev,
+    "--cvarcoi": do_cvarcoi,
+    "--cvarcoii": do_cvarcoii,
+    "--casyco": do_casyco,
+    "--cflattening": do_cflattening
 }
 
 
@@ -76,6 +93,11 @@ else:
         other = load_image(args.get('-other'))
         value = SIMILARITY[command](original, other)
         print(str(round(value,4)))
+
+    if command in CHARACTERISTICS:
+        image = load_image(args.get('-input'))
+        result = CHARACTERISTICS[command](image, args)
+        print(result)
         
     else:
         input_path = args.get('-input')
