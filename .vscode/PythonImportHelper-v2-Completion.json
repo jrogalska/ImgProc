@@ -435,6 +435,14 @@
         "documentation": {}
     },
     {
+        "label": "do_sedghesharp",
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "isExtraImport": true,
+        "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
         "label": "do_casyco",
         "kind": 2,
         "importPath": "commands.image_characteristics.casyco",
@@ -657,6 +665,51 @@
         "description": "commands.psnr",
         "peekOfCode": "def do_psnr(original: np.array, new:np.array):\n    original = original.astype(np.float64)\n    new = new.astype(np.float64)\n    if new.shape!=original.shape:\n        raise ValueError(\"Images need to be the same type and size!\")\n    if original.ndim==3:\n        channels = []\n        for ch in range(new.shape[2]):\n            calculated = _do_psnr_per_channel(original[:, :, ch], new[:, :, ch])\n            channels.append(calculated)",
         "detail": "commands.psnr",
+        "documentation": {}
+    },
+    {
+        "label": "do_sedghesharp",
+        "kind": 2,
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "peekOfCode": "def do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        y = _do_sedghesharp_single_channel(x, K)\n        return np.clip(np.rint(y), 0, 255).astype(np.uint8)\n    if x.ndim == 3 and x.shape[2] == 3:",
+        "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
+        "label": "K1",
+        "kind": 5,
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "peekOfCode": "K1 = np.array([[0, -1,  0],\n               [-1, 5, -1],\n               [0, -1,  0]], dtype=np.float32)\nK2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}",
+        "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
+        "label": "K2",
+        "kind": 5,
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "peekOfCode": "K2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:",
+        "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
+        "label": "K3",
+        "kind": 5,
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "peekOfCode": "K3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)",
+        "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
+        "label": "K_MAP",
+        "kind": 5,
+        "importPath": "commands.sedghesharp",
+        "description": "commands.sedghesharp",
+        "peekOfCode": "K_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        y = _do_sedghesharp_single_channel(x, K)\n        return np.clip(np.rint(y), 0, 255).astype(np.uint8)",
+        "detail": "commands.sedghesharp",
         "documentation": {}
     },
     {
