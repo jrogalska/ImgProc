@@ -748,7 +748,7 @@
         "kind": 2,
         "importPath": "utils.compute_histogram",
         "description": "utils.compute_histogram",
-        "peekOfCode": "def compute_histogram(img: np.ndarray,  num_bins: int = 256) -> tuple[np.ndarray, np.ndarray, int]:\n    \"\"\"\n    Computes the histogram of the given image channel (2D numpy array).\n    Args:\n        img (np.ndarray): 2D array representing the image channel.\n        num_bins (int): Number of bins for the histogram (default is 256).\n    Returns:\n        tuple[np.ndarray, np.ndarray, int]: A tuple containing:\n            - h (np.ndarray): Histogram array of shape (num_bins,).\n            - cdf (np.ndarray): Cumulative distribution function array of shape (num_bins,).",
+        "peekOfCode": "def compute_histogram(img: np.ndarray,  num_bins: int = 256) -> tuple[np.ndarray, np.ndarray, int]:\n    if img.ndim != 2:\n        raise ValueError(\"Input must be a 2D array representing a single image channel.\")\n    h = np.bincount(img.ravel(), minlength=num_bins).astype(np.int64) #zlicza wystąpienia wartości pikseli\n    h = h[:num_bins]  # histogram ma mieć dokładnie num_bins elementów\n    cdf = np.cumsum(h) # skumulowana suma histogramu\n    n = int(h.sum()) # całkowita liczba pikseli\n    cdf = cdf/n if n > 0 else cdf # normalizacja CDF\n    return h, cdf, n",
         "detail": "utils.compute_histogram",
         "documentation": {}
     },
