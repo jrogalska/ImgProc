@@ -25,16 +25,23 @@ def do_hhyper(img: np.ndarray, args: dict[str, str]) -> np.ndarray:
         return lut[ch]
 
     if img.ndim == 3:
-        H, W, C = img.shape
-        out = np.empty_like(img)
-        for c in range(C):
-            ch = img[..., c]
-            _, cdf, n = compute_histogram(ch, num_bins=256)
-            if n == 0:
-                out[..., c] = ch
-                continue
-            lut = _build_lut_from_cdf(cdf, gmin, gmax)
-            out[..., c] = lut[ch]
+        R = img[..., 0]
+        G = img[..., 1]
+        B = img [..., 2]
+        Y = 0.299 * R + 0.587* G + 0.114 * B
+        Y_u8 = np.clip(np.rint(Y), 0, 255).astype(np.uint8)
+        _, cdf, n = compute_histogram(Y_u8)
+        if (n==0):
+            return img.copy()
+        lut = _build_lut_from_cdf(cdf, gmin, gmax)
+        Y_new = lut[Y_u8].astype(np.float32)
+        eps = 1e-6
+        gain = Y_new/(Y+eps)
+        Rn = np.clip(np.rint(R*gain), 0, 255).astype(np.uint8)
+        Gn = np.clip(np.rint(G*gain), 0, 255).astype(np.uint8)
+        Bn = np.clip(np.rint(B*gain), 0, 255).astype(np.uint8)
+        out = np.stack([Rn, Gn, Bn], axis = 2)
         return out
+
 
     raise ValueError("Expected 2D (gray) or 3D (H,W,C) image")

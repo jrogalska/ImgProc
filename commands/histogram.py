@@ -34,7 +34,6 @@ def do_histogram(
     inner_w = max(1, plot_w - 2 * margin)
     inner_h = max(1, plot_h - 2 * margin)
 
-    # --- krok i szerokość słupka ---
     bar_w = 1
     auto_step = max(1, inner_w // num_bins)
 
@@ -42,7 +41,6 @@ def do_histogram(
     h_max = max(int(x) for x in h)
     scale = inner_h / h_max if h_max > 0 else 1.0
 
-    # --- płótno i rysowanie ---
     canvas = Image.new("RGB", (plot_w, plot_h), bg_color)
     draw = ImageDraw.Draw(canvas)
 
