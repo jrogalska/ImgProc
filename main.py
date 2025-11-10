@@ -27,6 +27,7 @@ from commands.image_characteristics.cvarcoii import do_cvarcoii
 from commands.image_characteristics.casyco import do_casyco
 from commands.image_characteristics.cflattening import do_cflattening
 from commands.sedghesharp import do_sedghesharp
+from commands.kirsh_operator import do_kirsh_operator
 """
 TASK VARIANTS:
 
@@ -46,7 +47,8 @@ COMMANDS = {
     "--max": do_max_filer,
     "--histogram": do_histogram,
     "--hhyper": do_hhyper,
-    "--sedgesharp": do_sedghesharp
+    "--sedgesharp": do_sedghesharp,
+    "--okirsf" : do_kirsh_operator
 }
 
 SIMILARITY = {
