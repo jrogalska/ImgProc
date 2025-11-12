@@ -5,7 +5,6 @@ from pathlib import Path
 import numpy as np
 from commands.sedghesharp import do_sedghesharp
 
-# C1–C6 + dodatki zgodnie z Twoją listą
 from commands.image_characteristics.cmean import do_cmean
 from commands.image_characteristics.cvariance import do_cvariance
 from commands.image_characteristics.cstdev import do_cstdev
@@ -15,7 +14,6 @@ from commands.image_characteristics.casyco import do_casyco
 from commands.image_characteristics.cflattening import do_cflattening
 from commands.image_characteristics.centropy import do_centropy
 
-# --- konfiguracja wejścia/wyjścia ---
 IMG_PATH = "./images/lenac.bmp"
 OUT_DIR = Path("./test_folder/")
 CSV_PATH = OUT_DIR / "metrics_sedghesharp.csv"
