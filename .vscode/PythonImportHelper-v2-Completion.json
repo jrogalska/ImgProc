@@ -218,6 +218,15 @@
         "documentation": {}
     },
     {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -403,6 +412,14 @@
         "documentation": {}
     },
     {
+        "label": "do_sedghesharp_opt",
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "isExtraImport": true,
+        "detail": "commands.sedghesharp_optimized",
+        "documentation": {}
+    },
+    {
         "label": "do_cmean",
         "importPath": "commands.image_characteristics.cmean",
         "description": "commands.image_characteristics.cmean",
@@ -531,6 +548,22 @@
         "documentation": {}
     },
     {
+        "label": "do_centropy",
+        "importPath": "commands.image_characteristics.centropy",
+        "description": "commands.image_characteristics.centropy",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.centropy",
+        "documentation": {}
+    },
+    {
+        "label": "do_centropy",
+        "importPath": "commands.image_characteristics.centropy",
+        "description": "commands.image_characteristics.centropy",
+        "isExtraImport": true,
+        "detail": "commands.image_characteristics.centropy",
+        "documentation": {}
+    },
+    {
         "label": "csv",
         "kind": 6,
         "isExtraImport": true,
@@ -545,14 +578,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "do_centropy",
-        "importPath": "commands.image_characteristics.centropy",
-        "description": "commands.image_characteristics.centropy",
-        "isExtraImport": true,
-        "detail": "commands.image_characteristics.centropy",
         "documentation": {}
     },
     {
@@ -812,7 +837,7 @@
         "kind": 2,
         "importPath": "commands.sedghesharp",
         "description": "commands.sedghesharp",
-        "peekOfCode": "def do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        y = _do_sedghesharp_single_channel(x, K)\n        return np.clip(np.rint(y), 0, 255).astype(np.uint8)\n    if x.ndim == 3 and x.shape[2] == 3:",
+        "peekOfCode": "def do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        start = time.time()\n        y = _do_sedghesharp_single_channel(x, K)\n        end = time.time()",
         "detail": "commands.sedghesharp",
         "documentation": {}
     },
@@ -830,7 +855,7 @@
         "kind": 5,
         "importPath": "commands.sedghesharp",
         "description": "commands.sedghesharp",
-        "peekOfCode": "K2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:",
+        "peekOfCode": "K2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:",
         "detail": "commands.sedghesharp",
         "documentation": {}
     },
@@ -839,7 +864,7 @@
         "kind": 5,
         "importPath": "commands.sedghesharp",
         "description": "commands.sedghesharp",
-        "peekOfCode": "K3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)",
+        "peekOfCode": "K3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)",
         "detail": "commands.sedghesharp",
         "documentation": {}
     },
@@ -848,8 +873,53 @@
         "kind": 5,
         "importPath": "commands.sedghesharp",
         "description": "commands.sedghesharp",
-        "peekOfCode": "K_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        y = _do_sedghesharp_single_channel(x, K)\n        return np.clip(np.rint(y), 0, 255).astype(np.uint8)",
+        "peekOfCode": "K_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        start = time.time()\n        y = _do_sedghesharp_single_channel(x, K)",
         "detail": "commands.sedghesharp",
+        "documentation": {}
+    },
+    {
+        "label": "do_sedghesharp_opt",
+        "kind": 2,
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "peekOfCode": "def do_sedghesharp_opt(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        start = time.time()\n        y = _do_sedghesharp_single_channel(x, K)\n        end = time.time()",
+        "detail": "commands.sedghesharp_optimized",
+        "documentation": {}
+    },
+    {
+        "label": "K1",
+        "kind": 5,
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "peekOfCode": "K1 = np.array([[0, -1,  0],\n               [-1, 5, -1],\n               [0, -1,  0]], dtype=np.float32)\nK2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}",
+        "detail": "commands.sedghesharp_optimized",
+        "documentation": {}
+    },
+    {
+        "label": "K2",
+        "kind": 5,
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "peekOfCode": "K2 = np.array([[-1, -1, -1],\n               [-1,  9, -1],\n               [-1, -1, -1]], dtype=np.float32)\nK3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp_opt(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:",
+        "detail": "commands.sedghesharp_optimized",
+        "documentation": {}
+    },
+    {
+        "label": "K3",
+        "kind": 5,
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "peekOfCode": "K3 = np.array([[ 1, -2,  1],\n               [-2,  5, -2],\n               [ 1, -2,  1]], dtype=np.float32)\nK_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp_opt(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)",
+        "detail": "commands.sedghesharp_optimized",
+        "documentation": {}
+    },
+    {
+        "label": "K_MAP",
+        "kind": 5,
+        "importPath": "commands.sedghesharp_optimized",
+        "description": "commands.sedghesharp_optimized",
+        "peekOfCode": "K_MAP = {\"K1\": K1, \"K2\": K2, \"K3\": K3}\ndef do_sedghesharp_opt(image: np.ndarray, args: dict[str, str]) -> np.ndarray:\n    kernel_key = args.get(\"-kernel\", \"K1\").upper()\n    if kernel_key not in K_MAP:\n        raise ValueError(\"Kernel not defined ('K1' | 'K2' | 'K3')\")\n    K = K_MAP[kernel_key]\n    x = image.astype(np.float32)\n    if x.ndim == 2:\n        start = time.time()\n        y = _do_sedghesharp_single_channel(x, K)",
+        "detail": "commands.sedghesharp_optimized",
         "documentation": {}
     },
     {
@@ -978,7 +1048,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "CHARACTERISTICS = {\n    \"--cmean\": do_cmean,\n    \"--cvariance\": do_cvariance,\n    \"--cstdev\": do_cstdev,\n    \"--cvarcoi\": do_cvarcoi,\n    \"--cvarcoii\": do_cvarcoii,\n    \"--casyco\": do_casyco,\n    \"--cflattening\": do_cflattening\n}\nif len(sys.argv) == 1:",
+        "peekOfCode": "CHARACTERISTICS = {\n    \"--cmean\": do_cmean,\n    \"--cvariance\": do_cvariance,\n    \"--cstdev\": do_cstdev,\n    \"--cvarcoi\": do_cvarcoi,\n    \"--cvarcoii\": do_cvarcoii,\n    \"--casyco\": do_casyco,\n    \"--cflattening\": do_cflattening,\n    \"--centropy\": do_centropy\n}",
         "detail": "main",
         "documentation": {}
     },

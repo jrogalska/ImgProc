@@ -19,6 +19,7 @@ from commands.max_difference import do_max_difference
 from commands.psnr import do_psnr
 from commands.histogram import do_histogram
 from commands.hhyper import do_hhyper
+from commands.sedghesharp_optimized import do_sedghesharp_opt
 from commands.image_characteristics.cmean import do_cmean
 from commands.image_characteristics.cvariance import do_cvariance
 from commands.image_characteristics.cstdev import do_cstdev
@@ -29,6 +30,7 @@ from commands.image_characteristics.cflattening import do_cflattening
 from commands.sedghesharp import do_sedghesharp
 from commands.kirsh_operator import do_kirsh_operator
 from commands.mask_filter import do_mask_filter
+from commands.image_characteristics.centropy import do_centropy
 """
 TASK VARIANTS:
 
@@ -50,7 +52,9 @@ COMMANDS = {
     "--hhyper": do_hhyper,
     "--sedgesharp": do_sedghesharp,
     "--okirsf" : do_kirsh_operator,
-    "--maskfltr": do_mask_filter
+    "--maskfltr": do_mask_filter,
+    "--sedgesharpopt": do_sedghesharp_opt
+
 }
 
 SIMILARITY = {
@@ -67,7 +71,8 @@ CHARACTERISTICS = {
     "--cvarcoi": do_cvarcoi,
     "--cvarcoii": do_cvarcoii,
     "--casyco": do_casyco,
-    "--cflattening": do_cflattening
+    "--cflattening": do_cflattening,
+    "--centropy": do_centropy
 }
 
 
