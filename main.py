@@ -31,6 +31,9 @@ from commands.sedghesharp import do_sedghesharp
 from commands.kirsh_operator import do_kirsh_operator
 from commands.mask_filter import do_mask_filter
 from commands.image_characteristics.centropy import do_centropy
+from commands.morphological.dilation import do_dilation
+from structural_elements import STRUCT_ELEMENTS
+from commands.morphological.erosion import do_erosion
 """
 TASK VARIANTS:
 
@@ -74,6 +77,10 @@ CHARACTERISTICS = {
     "--cflattening": do_cflattening,
     "--centropy": do_centropy
 }
+MORPHOLOGY = {
+    "--dilation": do_dilation,
+    "--erosion": do_erosion
+}
 
 
 if len(sys.argv) == 1:
@@ -114,12 +121,22 @@ else:
         output_path = args.get('-output')
 
         im = load_image(input_path)
-        try:
-            newIm = COMMANDS[command](im, args)
-            save_image(output_path, newIm)
 
-        except KeyError:
-            print("Command not found.\n")
+        if command in MORPHOLOGY:
+            struct_name = args.get('-struct')
+            if struct_name in STRUCT_ELEMENTS:
+                struct = STRUCT_ELEMENTS[struct_name]
+                newIm = MORPHOLOGY[command](im, struct, args)
+                save_image(output_path, newIm)
+            else: 
+                print(f"Error: Structural element '{struct_name} not found in structural_elements.py")
+        else:
+            try:
+                newIm = COMMANDS[command](im, args)
+                save_image(output_path, newIm)
+
+            except KeyError:
+                print("Command not found.\n")
 
     print("")
 

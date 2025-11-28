@@ -5,14 +5,14 @@ import numpy as np
 def load_image(path: str) -> np.ndarray:
     try:
         img = Image.open(path)
-        if img.mode == "P":
-            img = img.convert("RGB") # paletted image
-        elif img.mode == "LA": #grayscale with alpha
-            img = img.convert("L")
-        elif img.mode == "RGBA": #rgb with alpha
-            img = img.convert("RGB") #drop alpha channel
-        elif img.mode not in ("L", "RGB"):
-            img = img.convert("RGB") #convert to RGB if in unknown mode
+        #if img.mode == "P":
+        #    img = img.convert("RGB") # paletted image
+        #elif img.mode == "LA": #grayscale with alpha
+        #    img = img.convert("L")
+        #elif img.mode == "RGBA": #rgb with alpha
+         #   img = img.convert("RGB") #drop alpha channel
+       # elif img.mode not in ("L", "RGB"):
+         #   img = img.convert("RGB") #convert to RGB if in unknown mode
     except Exception as e:
         print("Error loading image. Check the file path and format. \n")
         raise SystemExit(2)
@@ -39,6 +39,8 @@ def save_image(path: str, img):
 
 def save_image_arr(path: str, arr: np.ndarray):
     try:
+        if arr.max() <= 1:
+            arr = arr*255
         newImg = Image.fromarray(arr.astype(np.uint8))
         newImg.show() 
         newImg.save(path)
