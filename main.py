@@ -34,6 +34,10 @@ from commands.image_characteristics.centropy import do_centropy
 from commands.morphological.dilation import do_dilation
 from structural_elements import STRUCT_ELEMENTS
 from commands.morphological.erosion import do_erosion
+from commands.morphological.opening import do_opening
+from commands. morphological.closing import do_closing
+from commands.morphological.HMT_transformation import do_hmt
+from commands.m4 import do_m4
 """
 TASK VARIANTS:
 
@@ -56,7 +60,8 @@ COMMANDS = {
     "--sedgesharp": do_sedghesharp,
     "--okirsf" : do_kirsh_operator,
     "--maskfltr": do_mask_filter,
-    "--sedgesharpopt": do_sedghesharp_opt
+    "--sedgesharpopt": do_sedghesharp_opt,
+    "--m4": do_m4
 
 }
 
@@ -79,7 +84,10 @@ CHARACTERISTICS = {
 }
 MORPHOLOGY = {
     "--dilation": do_dilation,
-    "--erosion": do_erosion
+    "--erosion": do_erosion,
+    "--opening": do_opening,
+    "--closing": do_closing,
+    "--hmt": do_hmt
 }
 
 
