@@ -48,7 +48,7 @@ def _do_sedghesharp_single_channel(img2d: np.ndarray, kernel: np.ndarray) -> np.
         
     if H < 3 or W < 3:
         return img2d.copy()
-
+    
     out = img2d.copy()  
     for h in range(1, H-1):
         for w in range(1, W-1):

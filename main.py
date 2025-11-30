@@ -37,10 +37,14 @@ from commands.morphological.erosion import do_erosion
 from commands.morphological.opening import do_opening
 from commands. morphological.closing import do_closing
 from commands.morphological.HMT_transformation import do_hmt
+from commands.region_growing import do_region_growing
 from commands.m4 import do_m4
 """
 TASK VARIANTS:
-
+Task 1: (all B, all G, N5, all E)
+Task 2: (H5, all C, S2, O4)
+Task 3: (M4, all R)
+Task 4 (T2, all F)
 """
 COMMANDS = {
     "--brightness": do_brightness,
@@ -61,8 +65,8 @@ COMMANDS = {
     "--okirsf" : do_kirsh_operator,
     "--maskfltr": do_mask_filter,
     "--sedgesharpopt": do_sedghesharp_opt,
-    "--m4": do_m4
-
+    "--m4": do_m4,
+    "--reggrow": do_region_growing
 }
 
 SIMILARITY = {
@@ -127,7 +131,7 @@ else:
     else:
         input_path = args.get('-input')
         output_path = args.get('-output')
-
+        
         im = load_image(input_path)
 
         if command in MORPHOLOGY:
