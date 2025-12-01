@@ -38,6 +38,8 @@ from commands.morphological.opening import do_opening
 from commands. morphological.closing import do_closing
 from commands.morphological.HMT_transformation import do_hmt
 from commands.m4 import do_m4
+from commands.morphological.dilation_optimized import do_dilation_optimized
+from commands.morphological.erosion_optimized import do_erosion_optimized
 """
 TASK VARIANTS:
 
@@ -87,7 +89,9 @@ MORPHOLOGY = {
     "--erosion": do_erosion,
     "--opening": do_opening,
     "--closing": do_closing,
-    "--hmt": do_hmt
+    "--hmt": do_hmt,
+    "--dilationo": do_dilation_optimized,
+    "--erosiono": do_erosion_optimized
 }
 
 
