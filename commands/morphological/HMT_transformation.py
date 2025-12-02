@@ -1,5 +1,5 @@
 import numpy as np
-from commands.morphological.erosion import do_erosion
+from commands.morphological.erosion_optimized import do_erosion_optimized
 
 def do_hmt(img: np.ndarray, struct_elem, args: dict) -> np.ndarray:
 
@@ -25,10 +25,10 @@ def do_hmt(img: np.ndarray, struct_elem, args: dict) -> np.ndarray:
         "origin": struct_elem["origin"]
     }
 
-    erosion_hit = do_erosion(img, hit, args)
+    erosion_hit = do_erosion_optimized(img, hit, args)
 
     inverted_img = 1 - img
-    erosion_miss = do_erosion(inverted_img, miss, args)
+    erosion_miss = do_erosion_optimized(inverted_img, miss, args)
 
     result = np.logical_and(erosion_hit, erosion_miss).astype(np.uint8)
 
