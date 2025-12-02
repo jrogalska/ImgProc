@@ -42,7 +42,7 @@ def save_image_arr(path: str, arr: np.ndarray):
         if arr.max() <= 1:
             arr = arr*255
         newImg = Image.fromarray(arr.astype(np.uint8))
-        newImg.show() 
+        #newImg.show() 
         newImg.save(path)
     except Exception as e:
         print("Error saving image. Check the file path. \n")
