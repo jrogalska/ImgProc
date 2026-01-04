@@ -10,6 +10,7 @@ def do_fft(data: np.ndarray) -> np.ndarray:
     Returns:
     np.ndarray: The FFT of the input signal.
     """
+    
     N = data.shape[0]
     if (N == 1):
         return data

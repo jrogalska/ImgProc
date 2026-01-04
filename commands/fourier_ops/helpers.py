@@ -10,6 +10,9 @@ def _next_pow_2(x: int) -> int:
     return p
 
 def _pad_to_pow2_2d(data: np.ndarray) -> np.ndarray:
+    #RGB -> Grayscale
+    if data.ndim == 3:
+        data = data[:,:,0] * 0.2989 + data[:,:,1] * 0.5870 + data[:,:,2] * 0.1140
     h, w = data.shape
     H = _next_pow_2(h)
     W = _next_pow_2(w)
@@ -35,10 +38,6 @@ def ifft2_custom(freq2d: np.ndarray) -> np.ndarray:
     return np.real(out).astype(np.float32)
 
 
-# Low pass zakłada, że sygnały wysokich częstotliwości są odcięte na obrzeżach obrazu w dziedzinie częstotliwości
-#jednak robienie maski na rogach jest niewygodne, więc przesuwamy zero częstotliwości do środka
-# (fftshift) i potem z powrotem (ifftshift)
-# Takie przesunięcie jest pomocne
 def _fftshift2(x: np.ndarray) -> np.ndarray:
     return np.roll(np.roll(x, x.shape[0] // 2, axis=0), x.shape[1] // 2, axis=1)
 

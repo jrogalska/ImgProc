@@ -43,6 +43,7 @@ from commands.morphological.dilation_optimized import do_dilation_optimized
 from commands.morphological.erosion_optimized import do_erosion_optimized
 from commands.fourier_ops.do_high_cut import do_high_cut
 from commands.fourier_ops.do_low_cut import do_low_cut
+from commands.fourier_ops.do_fft_vis import do_fft_vis
 
 """
 TASK VARIANTS:
@@ -73,7 +74,8 @@ COMMANDS = {
     "--m4": do_m4,
     "--reggrow": do_region_growing,
     "--highcut": do_high_cut,
-    "--lowcut": do_low_cut
+    "--lowcut": do_low_cut,
+    "--fftvis": do_fft_vis
 }
 
 SIMILARITY = {
@@ -154,7 +156,8 @@ else:
         else:
             try:
                 newIm = COMMANDS[command](im, args)
-                save_image(output_path, newIm)
+                if (output_path is not None):
+                    save_image(output_path, newIm)
 
             except KeyError:
                 print("Command not found.\n")

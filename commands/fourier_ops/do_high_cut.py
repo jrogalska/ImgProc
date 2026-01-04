@@ -1,18 +1,13 @@
 import numpy as np
 from commands.fourier_ops.do_fft import do_fft
 from commands.fourier_ops.do_ifft import do_ifft
+from commands.fourier_ops.helpers import _pad_to_pow2_2d, _fftshift2, _ifftshift2, fft2_custom, ifft2_custom
 
 
 # Low pass zakłada, że sygnały wysokich częstotliwości są odcięte na obrzeżach obrazu w dziedzinie częstotliwości
 #jednak robienie maski na rogach jest niewygodne, więc przesuwamy zero częstotliwości do środka
 # (fftshift) i potem z powrotem (ifftshift)
 # Takie przesunięcie jest pomocne
-def _fftshift2(x: np.ndarray) -> np.ndarray:
-    return np.roll(np.roll(x, x.shape[0] // 2, axis=0), x.shape[1] // 2, axis=1)
-
-def _ifftshift2(x: np.ndarray) -> np.ndarray:
-    return np.roll(np.roll(x, -(x.shape[0] // 2), axis=0), -(x.shape[1] // 2), axis=1)
-
 
 def low_pass_filter_image_custom(gray2d: np.ndarray, cutoff_ratio: float) -> np.ndarray:
     if gray2d.ndim != 2:
