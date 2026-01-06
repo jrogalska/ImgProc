@@ -112,6 +112,14 @@ STRUCT_ELEMENTS = {
             ], dtype=np.int8),
         "origin": (1,1)
         },
+    "xv": {
+        "shape": np.array([
+            [0,0,1],
+            [1,0,1],
+            [1,0,1]
+        ], dtype=np.int8),
+        "origin": (1,1)
+    },
 
     "xii[1]": {
         "shape": np.array([
