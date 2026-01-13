@@ -44,6 +44,9 @@ from commands.morphological.erosion_optimized import do_erosion_optimized
 from commands.fourier_ops.do_high_cut import do_high_cut
 from commands.fourier_ops.do_low_cut import do_low_cut
 from commands.fourier_ops.do_fft_vis import do_fft_vis
+from commands.fourier_ops.do_band_cut import do_band_cut
+from commands.fourier_ops.do_directional_highpass import do_dir_highpass
+from commands.fourier_ops.do_phase_modifying import do_phase_modifying
 
 """
 TASK VARIANTS:
@@ -75,7 +78,10 @@ COMMANDS = {
     "--reggrow": do_region_growing,
     "--highcut": do_high_cut,
     "--lowcut": do_low_cut,
-    "--fftvis": do_fft_vis
+    "--fftvis": do_fft_vis,
+    "--bandcut": do_band_cut,
+    "--dir_highpass": do_dir_highpass,
+    "--phase_mod": do_phase_modifying
 }
 
 SIMILARITY = {

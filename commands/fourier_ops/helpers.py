@@ -43,3 +43,12 @@ def _fftshift2(x: np.ndarray) -> np.ndarray:
 
 def _ifftshift2(x: np.ndarray) -> np.ndarray:
     return np.roll(np.roll(x, -(x.shape[0] // 2), axis=0), -(x.shape[1] // 2), axis=1)
+
+def resize(image: np.ndarray, new_shape: tuple) -> np.ndarray:
+    new_h, new_w = new_shape
+    old_h, old_w = image.shape
+
+    row_indices = (np.arange(new_h) * (old_h/new_h)).astype(int)
+    col_indices = (np.arange(new_w) * (old_w/new_w)).astype(int)
+
+    return image[row_indices[:, None], col_indices]
